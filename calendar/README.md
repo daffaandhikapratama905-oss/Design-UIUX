@@ -4,13 +4,15 @@ Eksplorasi desain antarmuka (UI/UX) kalender **frontend-only** tanpa backend, di
 
 ## Preview Antarmuka
 
-### Desktop View (7-Day Bento Matrix)
-![Desktop View](screenshots\desktop\dashboard.png) | ![Modal View](screenshots\desktop\new-event.png) |
+### Desktop View
+| Dashboard (7-Day Matrix) | New Event Modal |
+| :---: | :---: |
+| ![Desktop View](screenshots/desktop/dashboard.png) | ![Modal View](screenshots/desktop/new-event.png) |
 
 ### Mobile View & Custom Event Modal
-| Mobile Adaptive View | Custom Holst Modal & Date Picker |
+| Mobile Adaptive View | Mobile Event Modal |
 | :---: | :---: |
-| ![Mobile View](screenshots\mobile\new-event-m.png) | ![Modal View](screenshots\mobile\dashboar-m.png) |
+| ![Mobile View](screenshots/mobile/dashboar-m.png) | ![Mobile Modal](screenshots/mobile/new-event-m.png) |
 
 ## Sorotan Desain & Teknis
 - **Frontend Showcase Tanpa Backend:** Menggunakan state lokal dan `localStorage` browser sebagai penyimpanan sementara sehingga aman dibagikan secara publik tanpa risiko kebocoran data.
