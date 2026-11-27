@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# Holst Bento Calendar — Frontend Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Eksplorasi desain antarmuka (UI/UX) kalender **frontend-only** tanpa backend, dibuat untuk menampilkan pendekatan tata letak **Asymmetric Bento Grid**, palet warna **Holst**, dan transisi interaksi ringan (`<300ms`).
 
-Currently, two official plugins are available:
+## Preview Antarmuka
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Desktop View (7-Day Bento Matrix)
+![Desktop View](screenshots\desktop\dashboard.png) | ![Modal View](screenshots\desktop\new-event.png) |
 
-## React Compiler
+### Mobile View & Custom Event Modal
+| Mobile Adaptive View | Custom Holst Modal & Date Picker |
+| :---: | :---: |
+| ![Mobile View](screenshots\mobile\new-event-m.png) | ![Modal View](screenshots\mobile\dashboar-m.png) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sorotan Desain & Teknis
+- **Frontend Showcase Tanpa Backend:** Menggunakan state lokal dan `localStorage` browser sebagai penyimpanan sementara sehingga aman dibagikan secara publik tanpa risiko kebocoran data.
+- **Holst Color Palette:** Menggunakan skema warna datar (*flat solid tones* tanpa gradasi 3D): `#F7F0E7`, `#E6D8C9`, `#35534A`, `#4F7568`, `#6F9988`, `#98BCAE`, dan `#C8BEAD`.
+- **Semantic HTML & Data-Attributes:** Struktur komponen dibangun menggunakan elemen HTML semantik (`<main>`, `<header>`, `<section>`, `<article>`, `<dialog>`) dan token CSS murni tanpa tumpukan `<div>` berlebih.
+- **Adaptive Responsive Layout:** Tampilan otomatis menyesuaikan antara fokus harian (*Daily Focused View*) pada layar ponsel dan matriks mingguan 7 hari penuh pada tablet/desktop.
+- **Interaksi & Komponen Kustom:** Dilengkapi animasi *liquid pill*, pemilih tanggal kustom bertema Holst, filter kategori real-time, pencarian agenda, serta input waktu manual berformat AM/PM.
 
-## Expanding the Oxlint configuration
+## Tech Stack
+- **Framework:** React + TypeScript (Vite)
+- **Styling:** Tailwind CSS v4 + CSS Design Tokens
+- **Utilities:** `date-fns`, `lucide-react`
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `tsrs` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Cara Menjalankan di Lokal
+```bash
+cd calendar
+npm install
+npm run dev
